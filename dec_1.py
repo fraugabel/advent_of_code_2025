@@ -1,7 +1,7 @@
 def dial(position:int ,up:bool, num:int, count:int):
   print(f"start {position}")
   if up is True:
-    position += num
+    position +=num
   else:
     position -=num
 
@@ -18,8 +18,10 @@ def dial(position:int ,up:bool, num:int, count:int):
   return position,count
 
 
+with open("puzzle_input", "r", encoding="utf-8") as f:
+    dials = [line.strip() for line in f]
+print(len(dials))    
 
-
-where,password=dial(0,False,40,0)
+where,password=dial(0,False,4000,0)
 print(where)
 print(password)
