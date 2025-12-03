@@ -17,14 +17,24 @@ def dial(position:int ,up:bool, num:int, count:int):
 
   return position,count
 
-# TODO einlesen der listenelemte 
-# parse ersten buchstaben -> R = True
-# wandle nächsten teil in int um
+# initiation
+where=50
+password=0
+dial_up=True
+dial_num=0
+file="test_input"
 
-with open("puzzle_input", "r", encoding="utf-8") as f:
+with open(file, "r", encoding="utf-8") as f:
     dials = [line.strip() for line in f]
 print(len(dials))    
 
-where,password=dial(0,False,4000,0)
+for d in dials:
+  if d[0] == 'R':
+    dial_up = True
+  else:
+    dial_up = False
+  dial_num=int(d[1:])  
+  where,password=dial(where,dial_up,dial_num,password)
+
 print(where)
 print(password)
