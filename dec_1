@@ -1,0 +1,23 @@
+def dial(position:int ,up:bool, num:int, count:int):
+  print(f"start {position}")
+  if up is True:
+    position += num
+  else:
+    position -=num
+
+  print(f"calc {position}")
+  
+  if position < 0:
+    position=99 - abs(position)
+    count += 1
+  
+  if position > 99:
+    position=position - 99
+    count +=1
+
+  return position,count
+
+
+where,password=dial(0,False,40,0)
+print(where)
+print(password)
