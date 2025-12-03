@@ -6,14 +6,14 @@ def dial(position:int ,up:bool, num:int, count:int):
     position -=num
 
   print(f"calc {position}")
+  while position< 0 or position > 99:  
+    if position < 0:
+      position=99 - abs(position)
+      count += 1
   
-  if position < 0:
-    position=99 - abs(position)
-    count += 1
-  
-  if position > 99:
-    position=position - 99
-    count +=1
+    if position > 99:
+      position=position - 99
+      count +=1
 
   return position,count
 
