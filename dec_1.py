@@ -18,6 +18,8 @@ def dial(position:int ,up:bool, num:int, count:int):
   return position,count
 
 
+
+
 where,password=dial(0,False,40,0)
 print(where)
 print(password)
