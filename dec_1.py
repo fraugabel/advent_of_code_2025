@@ -17,6 +17,9 @@ def dial(position:int ,up:bool, num:int, count:int):
 
   return position,count
 
+# TODO einlesen der listenelemte 
+# parse ersten buchstaben -> R = True
+# wandle nächsten teil in int um
 
 with open("puzzle_input", "r", encoding="utf-8") as f:
     dials = [line.strip() for line in f]
