@@ -22,7 +22,7 @@ where = 50
 password = 0
 dial_up = True
 dial_num = 0
-file = "puzzle_input"
+file = "test_input"
 
 with open(file, "r", encoding="utf-8") as f:
     dials = [line.strip() for line in f]
