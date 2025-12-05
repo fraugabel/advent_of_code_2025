@@ -27,6 +27,8 @@ def dial(position: int, up: bool, num: int, count: int):
                 count += 1 #pt2
             else:
                 start_zero = False
+
+            print(f"in loop {position}")
             print(f"count {count}")
     return position, count
 
