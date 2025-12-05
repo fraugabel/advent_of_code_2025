@@ -1,20 +1,33 @@
+import pdb
+
 def dial(position: int, up: bool, num: int, count: int):
-    print(f"start {position}")
+    print(f"########## start {position}")
+    print(f"{num} (up:{up})")
+    start_zero=False
+    if position == 0:
+        start_zero = True
+
     if up is True:
         position += num
     else:
         position -= num
     print(f"calc {position}")
-    while position < 0 or position > 99:
-        if position < 0:
-            position = 99 - abs(position+1)
-
-        if position > 99:
-            position = position - 100
-
+    #pt1:
     if position == 0:       
-      count += 1
-
+        count += 1
+        print(f"count {count}")
+        return position, count
+    else:
+        while position < 0 or position > 99:
+            if position < 0:
+                position = 100 - abs(position)
+            if position > 99:
+                position = position - 100
+            if not start_zero:
+                count += 1 #pt2
+            else:
+                start_zero = False
+            print(f"count {count}")
     return position, count
 
 
@@ -37,5 +50,5 @@ for d in dials:
     dial_num = int(d[1:])
     where, password = dial(where, dial_up, dial_num, password)
 
-print(where)
-print(password)
+print(f"########## end  {where}")
+print(f"pw: {password}")
