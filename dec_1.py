@@ -27,7 +27,6 @@ def dial(position: int, up: bool, num: int, count: int):
                 count += 1 #pt2
             else:
                 start_zero = False
-
             print(f"in loop {position}")
             print(f"count {count}")
     return position, count
@@ -38,6 +37,8 @@ where = 50
 password = 0
 dial_up = True
 dial_num = 0
+#file = "test_input_1"
+#file = "test_input_2"
 file = "puzzle_input"
 
 with open(file, "r", encoding="utf-8") as f:
