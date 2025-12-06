@@ -1,4 +1,4 @@
-file = "test_input_2"
+file = "puzzle_input_2"
 
 
     # pseudocode:
