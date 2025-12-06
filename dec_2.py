@@ -1,4 +1,4 @@
-file = "puzzle_input_2"
+file = "test_input_2"
 
 def digitize(num:int):
     '''
@@ -37,6 +37,12 @@ def return_numbers(dig_count,num_list):
         num += prod
     return num
 
+def stringlize(numlist):
+    num_string_list=list(map(str, numlist))
+    substring = num_string_list[0]
+    count = sum(substring in s for s in num_string_list)
+    print(f"sub {count}")
+    return
 
 with open(file) as f:
     all_ids =" ".join(line.strip() for line in f)
@@ -49,6 +55,7 @@ for single_range in ranges:
     single_range = [int(teil.strip()) for teil in single_range.split("-")]
     # fill up the ranges
     filled_range=list(range(single_range[0],single_range[1]+1))
+    stringlize(filled_range)
     for num in filled_range:
         dig_count, evol_twins=digitize(num)
         if evol_twins != 0:
