@@ -24,7 +24,7 @@ def dial(position: int, up: bool, num: int, count: int):
             if position > 99:
                 position = position - 100
             if not start_zero:
-                count += 1 #pt2
+                count += 1 #pt2  
             else:
                 start_zero = False
             print(f"in loop {position}")
@@ -37,9 +37,7 @@ where = 50
 password = 0
 dial_up = True
 dial_num = 0
-#file = "test_input_1"
-#file = "test_input_2"
-file = "puzzle_input"
+file = "puzzle_input_1"
 
 with open(file, "r", encoding="utf-8") as f:
     dials = [line.strip() for line in f]
